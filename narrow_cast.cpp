@@ -22,7 +22,7 @@ int main() {
   try {
     int narrows{142857};
     const auto narrows_short = narrow_cast<short>(narrows);
-    cout << "Narrowing value " << perfect_short << "\n";
+    cout << "Narrowing value " << narrows_short << "\n";
   } catch (const std::exception &e) {
     cout << "Execption: " << e.what() << '\n';
   }
