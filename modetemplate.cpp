@@ -19,14 +19,13 @@ template <typename T> T mode(T *values, size_t length) {
            << "\n";
     } else {
       for (size_t j{}; j < length; j++) {
-        cout << "Inner loop " << values[j] << "\n";
         if (values[i] == values[j]) {
           count++;
         }
       }
     }
 
-    cout << "Logging the mode " << values[i] << " The count: " << count << "\n";
+    cout << "Current value " << values[i] << " The count: " << count << "\n";
     if (count > maxCount) {
       maxCount = count;
       result = values[i];
