@@ -22,24 +22,24 @@ struct TimerClass {
          << other.endtime.tv_sec << "\n";
   }
 
-  //   // move constructor
-  //   TimerClass(TimerClass &&other) noexcept
-  //       : timestamp(other.timestamp), endtime{0, 0} {
-  //     // assign the member values in other to their ZERO values.
-  //     other.timestamp = {0, 0};
-  //     other.endtime = {0, 0};
-  //   }
+  // move constructor
+  TimerClass(TimerClass &&other) noexcept
+      : timestamp(other.timestamp), endtime{0, 0} {
+    // assign the member values in other to their ZERO values.
+    other.timestamp = {0, 0};
+    other.endtime = {0, 0};
+  }
 
-  //   // copy assignment
-  //   TimerClass &operator=(const TimerClass &other) {
-  //     // self-reference check
-  //     if (this == &other)
-  //       return *this;
+  // copy assignment
+  TimerClass &operator=(const TimerClass &other) {
+    // self-reference check
+    if (this == &other)
+      return *this;
 
-  //     timestamp = other.timestamp;
-  //     endtime = {0, 0};
-  //     return *this;
-  //   }
+    timestamp = other.timestamp;
+    endtime = {0, 0};
+    return *this;
+  }
 
   // move assignment
   TimerClass &operator=(TimerClass &&other) noexcept {
