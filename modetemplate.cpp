@@ -52,7 +52,7 @@ int main() {
   //   string failinitializer[]{"a", "b", "c", "c"};
   //   const auto fail_res =
   //       mode<string>(failinitializer, sizeof(failinitializer) /
-  //       sizeof(char));
+  //       sizeof(string));
 
   cout << "The mode " << res_mode << " \n";
 }
